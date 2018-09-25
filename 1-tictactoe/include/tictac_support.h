@@ -60,12 +60,63 @@ int save_board( std::string filename, int board[][3] );
 
 int make_move( int board[][3] );
 
+/**
+	minimax: takes a board state and recursively calls itself
+	to evaluate what is the optimal move assuming the other
+	player is also playing optimally
+
+	args:
+		int [][3] board: 3x3 array of ints representing the 
+		board state. The values of board are altered based
+		on the move
+			0: empty
+			1: x
+		   -1: o
+
+		depth: an int passed by reference used to keep track
+		how many steps have been checked. Increments every time
+		minimax is called.
+
+		state: an int (1 or -1) used to track whose turn it is.
+		This could also be calculated every call to minimax, but
+		this seems a bit more efficient.
+		
+	returns (int):
+		The optimal score of the board state
+**/
+
 int minimax( int board[][3], int* depth, int state );
+
+/**
+	check_terminal_state: takes a board state and checks if it
+	is in the terminal state or game over condition by find the
+	sum of each row, column, and diagonal. It then checks to see
+	if any of those sums are 3 or -3. If 3, player 1 wins, and if
+	-3, player 2 wins. Also checks for draws (the board is full
+	and no one has one). If no game over condition was met,
+	returns 0.
+
+	args:
+		int [][3] board: 3x3 array of ints representing the 
+		board state. The values of board are altered based
+		on the move
+			0: empty
+			1: x
+		   -1: o
+		
+	returns (int):
+		0: not in a terminal state
+		1: draw
+		2: player 1 wins
+		3: player 2 wins
+**/
 
 int check_terminal_state( int board[][3] );
 
+//returns the max of two values a and b
 int max( int a, int b );
 
+//returns the min of two values a and b
 int min( int a, int b );
 
 #endif

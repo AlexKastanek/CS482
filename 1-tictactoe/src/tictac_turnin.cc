@@ -364,6 +364,7 @@ int check_terminal_state( int board[][3] )
 	}
 }
 
+//returns the max of two values a and b
 int max( int a, int b )
 {
 	if (a > b)
@@ -376,6 +377,7 @@ int max( int a, int b )
 	}
 }
 
+//returns the min of two values a and b
 int min( int a, int b )
 {
 	if (a < b)
