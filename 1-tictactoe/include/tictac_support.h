@@ -60,4 +60,12 @@ int save_board( std::string filename, int board[][3] );
 
 int make_move( int board[][3] );
 
+int minimax( int board[][3], int* depth, int state );
+
+int check_terminal_state( int board[][3] );
+
+int max( int a, int b );
+
+int min( int a, int b );
+
 #endif
