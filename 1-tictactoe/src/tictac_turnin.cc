@@ -61,9 +61,18 @@ int make_move( int board[][3] )
 
 	printf("state: %d\n", state);
 
+	//print the board state
+	printf("\nBoard state before move:\n");
+	print_board(board);
+	printf("\n");
+
 	//check if game can be won this turn
 	if (check_winnable_now(board, state))
 	{
+		//print the board state
+		printf("\nBoard state after move:\n");
+		print_board(board);
+		printf("\n");
 		return 1;
 	}
 
@@ -105,6 +114,11 @@ int make_move( int board[][3] )
 	// use optimal values to make the actual move
 	printf( "player [%d] made move after evaluating %d steps: [%d,%d]\n", state, moveCount, optimalRow, optimalCol );
 	board[optimalRow][optimalCol] = state;
+
+	//print the board state
+	printf("\nBoard state after move:\n");
+	print_board(board);
+	printf("\n");
 
 	// check if win condition was met
 	terminalState = check_terminal_state(board);
@@ -284,7 +298,7 @@ bool check_winnable_now( int board[][3], int state )
 				if (!terminalState)
 				{
 					board[i][j] = 0;
-					return false;
+					//return false;
 				}
 				//if the game is won, end the game
 				else
@@ -309,6 +323,8 @@ bool check_winnable_now( int board[][3], int state )
 			}
 		}
 	}
+
+	return false;
 }
 
 /**
@@ -441,5 +457,18 @@ int min( int a, int b )
 	else
 	{
 		return b;
+	}
+}
+
+//prints the board
+void print_board( int board[][3] )
+{
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d ", board[i][j]);
+		}
+		printf("\n");
 	}
 }

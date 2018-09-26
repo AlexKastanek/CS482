@@ -121,4 +121,7 @@ int max( int a, int b );
 //returns the min of two values a and b
 int min( int a, int b );
 
+//prints the board
+void print_board( int board[][3] );
+
 #endif
