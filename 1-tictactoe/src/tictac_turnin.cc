@@ -48,18 +48,24 @@ int make_move( int board[][3] )
 				printf("a draw.\n");
 				break;
 			case 2:
-				printf("a victory for player 1");
+				printf("a victory for player 1\n");
 				break;
 			case 3:
-				printf("a vectory for player 2");
+				printf("a vectory for player 2\n");
 				break;
 			default:
-				printf("Error: Invalid rvalue from check_terminal_state()\n");
+				printf("\nError: Invalid rvalue from check_terminal_state()\n");
 		}
 		return 0;
 	}
 
 	printf("state: %d\n", state);
+
+	//check if game can be won this turn
+	if (check_winnable_now(board, state))
+	{
+		return 1;
+	}
 
 	//loop through each available space
 	for (int i = 0; i < 3; i++)
@@ -254,6 +260,54 @@ int minimax( int board[][3], int* depth, int state )
 		}
 
 		return optimalMove;
+	}
+}
+
+bool check_winnable_now( int board[][3], int state )
+{
+	//try each available space and check if move leads to terminal state
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			if (board[i][j] == 0)
+			{
+				int terminalState;
+
+				//try the move
+				board[i][j] = state;
+
+				//check if move leads to terminal state
+				terminalState = check_terminal_state(board);
+
+				//if the game is still going, undo the move
+				if (!terminalState)
+				{
+					board[i][j] = 0;
+					return false;
+				}
+				//if the game is won, end the game
+				else
+				{
+					printf( "player [%d] made move after observing game could be finished this turn: [%d,%d]\n", state, i, j);
+					switch (terminalState)
+					{
+						case 1:
+							printf("DRAW\n");
+							break;
+						case 2:
+							printf("PLAYER 1 WINS\n");
+							break;
+						case 3:
+							printf("PLAYER 2 WINS\n");
+							break;
+						default:
+							printf("Error: Invalid rvalue from check_terminal_state()\n");
+					}
+					return true;
+				}
+			}
+		}
 	}
 }
 

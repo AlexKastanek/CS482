@@ -87,6 +87,8 @@ int make_move( int board[][3] );
 
 int minimax( int board[][3], int* depth, int state );
 
+bool check_winnable_now( int board[][3], int state );
+
 /**
 	check_terminal_state: takes a board state and checks if it
 	is in the terminal state or game over condition by find the
