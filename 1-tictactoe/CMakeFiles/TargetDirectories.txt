@@ -1,3 +1,0 @@
-/home/alex/Documents/cs482-fall2018/1-tictactoe/CMakeFiles/edit_cache.dir
-/home/alex/Documents/cs482-fall2018/1-tictactoe/CMakeFiles/rebuild_cache.dir
-/home/alex/Documents/cs482-fall2018/1-tictactoe/CMakeFiles/tictactoe.dir
