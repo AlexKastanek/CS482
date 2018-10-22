@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SmsDatabase.h
+vector
+-
+string
+-
+iostream
+-
+fstream
+-
+
+/home/alex/Documents/CS482/2-spam/src/SmsDatabase.cpp
+SmsDatabase.h
+/home/alex/Documents/CS482/2-spam/src/SmsDatabase.h
+
+/home/alex/Documents/CS482/2-spam/src/main.cpp
+SmsDatabase.h
+/home/alex/Documents/CS482/2-spam/src/SmsDatabase.h
+iostream
+-
+

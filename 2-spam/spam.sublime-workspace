@@ -1,0 +1,331 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Get",
+				"GetNext"
+			],
+			[
+				"Doubly",
+				"DoublyLinkedListNode"
+			],
+			[
+				"Doubl",
+				"DoublyLinkedListNode"
+			],
+			[
+				"D",
+				"DOUBLY_LINKED"
+			],
+			[
+				"m_spin",
+				"m_spinAngle"
+			],
+			[
+				"text",
+				"textObjectName"
+			],
+			[
+				"tex",
+				"textObjectName"
+			],
+			[
+				"ImGui",
+				"ImGuiWindowFlags_NoResize"
+			],
+			[
+				"defa",
+				"defaultHeight"
+			],
+			[
+				"SDLK",
+				"SDLK_PLUS"
+			],
+			[
+				"rote",
+				"rotateFactor"
+			],
+			[
+				"m_camera",
+				"m_cameraSpeed"
+			],
+			[
+				"m_Camera",
+				"m_cameraSpeed"
+			],
+			[
+				"SetVelocity",
+				"SetVelocityY"
+			],
+			[
+				"MODE",
+				"MODE_OVERVIEW"
+			],
+			[
+				"MODE_",
+				"MODE_FOCUS"
+			],
+			[
+				"m_min",
+				"m_minCameraDistanceOffset"
+			],
+			[
+				"m_focus",
+				"m_minFocusRadius"
+			],
+			[
+				"m_focu",
+				"m_focusChanged"
+			],
+			[
+				"camera",
+				"CameraSpeedFactor"
+			],
+			[
+				"m_f",
+				"m_focusedObjectIndex"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "include/SmsDatabase.h",
+			"settings":
+			{
+				"buffer_size": 434,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/alex/Documents/CS482/2-spam/include/SpamDatabase.h",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/src/main.cpp",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/src/DoublyLinkedListNode.hpp",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/src/DoublyLinkedList.hpp",
+		"/home/alex/Downloads/spam.csv",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/src/DoublyLinkedList.cpp",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/include/DoublyLinkedList.h",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/DoublyLinkedList.h",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/DoublyLinkedList.cpp",
+		"/home/alex/Documents/CustomObjects/DoublyLinkedList/main.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/model.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/camera.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/camera.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/main.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/gui.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/gui.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/graphics.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/graphics.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/engine.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/planet.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/planet.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/object.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/object.cpp",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/moon.h",
+		"/home/alex/Documents/CS480Kastanek/PA7/src/moon.cpp",
+		"/home/alex/Documents/BlenderFiles/Planets/UranusRing.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/JupiterRing.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/NeptuneRing.obj",
+		"/home/alex/Documents/CS480Kastanek/PA7/assets/SaturnRing.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/SaturnRings.obj",
+		"/home/alex/Documents/CS480Kastanek/PA7/assets/UranusRing.obj",
+		"/home/alex/Documents/CS480Kastanek/PA7/assets/planetData.txt",
+		"/home/alex/Documents/BlenderFiles/Planets/Neptune.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Pluto.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Uranus.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Saturn.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Jupiter.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Mars.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Venus.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Sun.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Mercury.obj",
+		"/home/alex/Documents/BlenderFiles/Planets/Earth.obj",
+		"/home/alex/Documents/CS480Kastanek/PA7/include/graphics_headers.h",
+		"/home/alex/Documents/CS480Kastanek/PA1/include/graphics_headers.h",
+		"/home/alex/Documents/CS480Kastanek/PA0/include/graphics_headers.h"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setdefaultfoc"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "include/SmsDatabase.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "spam.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
