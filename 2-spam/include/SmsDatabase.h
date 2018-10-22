@@ -18,6 +18,7 @@ struct Sms
 {
   MessageType type;
   string message;
+  vector<string> words;
 };
 
 class SmsDatabase

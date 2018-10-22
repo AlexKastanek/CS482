@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"line",
+				"lineCount"
+			],
+			[
+				"messag",
+				"messageType"
+			],
+			[
+				"MESS",
+				"MESSAGE_SPAM"
+			],
+			[
+				"mssag",
+				"messageType"
+			],
+			[
+				"commA",
+				"commaCounter"
+			],
+			[
+				"comm",
+				"commaCounter"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"mess",
+				"messageType"
+			],
+			[
 				"Get",
 				"GetNext"
 			],
@@ -92,10 +124,38 @@
 	"buffers":
 	[
 		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 437,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "include/SmsDatabase.h",
 			"settings":
 			{
-				"buffer_size": 434,
+				"buffer_size": 486,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/SmsDatabase.cpp",
+			"settings":
+			{
+				"buffer_size": 3407,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "res/spam.csv",
+			"settings":
+			{
+				"buffer_size": 348903,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -180,7 +240,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -217,19 +277,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "include/SmsDatabase.h",
+					"file": "src/main.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 434,
+						"buffer_size": 437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								184,
+								184
 							]
 						],
 						"settings":
@@ -241,6 +301,90 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "include/SmsDatabase.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/SmsDatabase.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3407,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2532,
+								2532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1566.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "res/spam.csv",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 348903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251574,
+								251574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
