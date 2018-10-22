@@ -19,7 +19,9 @@ bool SmsDatabase::ExtractData(string filename)
   fin.open(filename);
   if (!fin.is_open())
   {
-    cout << "ERROR: Could not open file: " << filename << endl;
+    cout << "ERROR: Could not open file: " << filename 
+         << ". Ensure file is located in res directory." 
+         << endl;
     return false;
   }
 
