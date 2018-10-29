@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"spam",
+				"spamCount"
+			],
+			[
+				"outHam",
+				"outHamProbabilityFile"
+			],
+			[
+				"ou",
+				"outHamProbabilityFilePath"
+			],
+			[
+				"out",
+				"outHamProbabilityFile"
+			],
+			[
+				"ouSpamFil",
+				"outSpamProbabilityFileName"
+			],
+			[
+				"outSam",
+				"outSpamProbabilityFilePath"
+			],
+			[
+				"inS",
+				"inSpamFileName"
+			],
+			[
+				"res",
+				"resourcesDirPath"
+			],
+			[
+				"inSpam",
+				"inSpamFilePath"
+			],
+			[
+				"command",
+				"commandArgCount"
+			],
+			[
+				"ham",
+				"hamMap"
+			],
+			[
+				"unord",
+				"unordered_map\tstandard header (since c++11)"
+			],
+			[
 				"line",
 				"lineCount"
 			],
@@ -127,7 +175,7 @@
 			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 437,
+				"buffer_size": 4075,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -145,7 +193,7 @@
 			"file": "src/SmsDatabase.cpp",
 			"settings":
 			{
-				"buffer_size": 3407,
+				"buffer_size": 3475,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -240,7 +288,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -281,15 +329,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 437,
+						"buffer_size": 4075,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								184,
-								184
+								3445,
+								3445
 							]
 						],
 						"settings":
@@ -297,7 +345,7 @@
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1890.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -328,7 +376,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -337,15 +385,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3407,
+						"buffer_size": 3475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2532,
-								2532
+								306,
+								306
 							]
 						],
 						"settings":
@@ -353,10 +401,10 @@
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1566.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -384,7 +432,7 @@
 						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/training.dir/src/training.cpp.o"
   "CMakeFiles/training.dir/src/SmsDatabase.cpp.o"
-  "CMakeFiles/training.dir/src/main.cpp.o"
   "training.pdb"
   "training"
 )

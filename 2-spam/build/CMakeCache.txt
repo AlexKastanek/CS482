@@ -130,7 +130,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=training
+CMAKE_PROJECT_NAME:STATIC=spam
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -180,6 +180,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+spam_BINARY_DIR:STATIC=/home/alex/Documents/CS482/2-spam/build
+
+//Value Computed by CMake
+spam_SOURCE_DIR:STATIC=/home/alex/Documents/CS482/2-spam
 
 //Value Computed by CMake
 training_BINARY_DIR:STATIC=/home/alex/Documents/CS482/2-spam/build

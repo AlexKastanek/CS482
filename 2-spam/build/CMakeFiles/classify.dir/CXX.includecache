@@ -20,7 +20,7 @@ fstream
 SmsDatabase.h
 /home/alex/Documents/CS482/2-spam/src/SmsDatabase.h
 
-/home/alex/Documents/CS482/2-spam/src/training.cpp
+/home/alex/Documents/CS482/2-spam/src/classify.cpp
 SmsDatabase.h
 /home/alex/Documents/CS482/2-spam/src/SmsDatabase.h
 unordered_map

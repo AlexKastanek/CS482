@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/training.dir/src/SmsDatabase.cpp.o CMakeFiles/training.dir/src/main.cpp.o  -o training 
+/usr/bin/c++    -rdynamic CMakeFiles/training.dir/src/training.cpp.o CMakeFiles/training.dir/src/SmsDatabase.cpp.o  -o training 

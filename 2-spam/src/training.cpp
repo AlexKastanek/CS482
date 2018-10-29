@@ -12,10 +12,9 @@ int main(int argc, char *argv[])
   vector<Sms> data;
   unordered_map<string, int> hamMap;
   unordered_map<string, int> spamMap;
-  //ifstream inSpamFile;
-  ofstream outHamProbabilityFile, outSpamProbabilityFile;
   int hamCount = 0, spamCount = 0;
   int commandArgCount = 7;
+  ofstream outHamProbabilityFile, outSpamProbabilityFile;
   string resourcesDirPath = "..//res//";
   string inSpamFilePath, outHamProbabilityFilePath, outSpamProbabilityFilePath;
 

@@ -123,6 +123,19 @@ training/fast:
 	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/build
 .PHONY : training/fast
 
+#=============================================================================
+# Target rules for targets named classify
+
+# Build rule for target.
+classify: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 classify
+.PHONY : classify
+
+# fast build rule for target.
+classify/fast:
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/build
+.PHONY : classify/fast
+
 src/SmsDatabase.o: src/SmsDatabase.cpp.o
 
 .PHONY : src/SmsDatabase.o
@@ -130,6 +143,7 @@ src/SmsDatabase.o: src/SmsDatabase.cpp.o
 # target to build an object file
 src/SmsDatabase.cpp.o:
 	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/SmsDatabase.cpp.o
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/SmsDatabase.cpp.o
 .PHONY : src/SmsDatabase.cpp.o
 
 src/SmsDatabase.i: src/SmsDatabase.cpp.i
@@ -139,6 +153,7 @@ src/SmsDatabase.i: src/SmsDatabase.cpp.i
 # target to preprocess a source file
 src/SmsDatabase.cpp.i:
 	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/SmsDatabase.cpp.i
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/SmsDatabase.cpp.i
 .PHONY : src/SmsDatabase.cpp.i
 
 src/SmsDatabase.s: src/SmsDatabase.cpp.s
@@ -148,34 +163,62 @@ src/SmsDatabase.s: src/SmsDatabase.cpp.s
 # target to generate assembly for a file
 src/SmsDatabase.cpp.s:
 	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/SmsDatabase.cpp.s
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/SmsDatabase.cpp.s
 .PHONY : src/SmsDatabase.cpp.s
 
-src/main.o: src/main.cpp.o
+src/classify.o: src/classify.cpp.o
 
-.PHONY : src/main.o
+.PHONY : src/classify.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/classify.cpp.o:
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/classify.cpp.o
+.PHONY : src/classify.cpp.o
 
-src/main.i: src/main.cpp.i
+src/classify.i: src/classify.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/classify.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/classify.cpp.i:
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/classify.cpp.i
+.PHONY : src/classify.cpp.i
 
-src/main.s: src/main.cpp.s
+src/classify.s: src/classify.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/classify.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/classify.cpp.s:
+	$(MAKE) -f CMakeFiles/classify.dir/build.make CMakeFiles/classify.dir/src/classify.cpp.s
+.PHONY : src/classify.cpp.s
+
+src/training.o: src/training.cpp.o
+
+.PHONY : src/training.o
+
+# target to build an object file
+src/training.cpp.o:
+	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/training.cpp.o
+.PHONY : src/training.cpp.o
+
+src/training.i: src/training.cpp.i
+
+.PHONY : src/training.i
+
+# target to preprocess a source file
+src/training.cpp.i:
+	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/training.cpp.i
+.PHONY : src/training.cpp.i
+
+src/training.s: src/training.cpp.s
+
+.PHONY : src/training.s
+
+# target to generate assembly for a file
+src/training.cpp.s:
+	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/training.cpp.s
+.PHONY : src/training.cpp.s
 
 # Help Target
 help:
@@ -186,12 +229,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... training"
 	@echo "... edit_cache"
+	@echo "... classify"
 	@echo "... src/SmsDatabase.o"
 	@echo "... src/SmsDatabase.i"
 	@echo "... src/SmsDatabase.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/classify.o"
+	@echo "... src/classify.i"
+	@echo "... src/classify.s"
+	@echo "... src/training.o"
+	@echo "... src/training.i"
+	@echo "... src/training.s"
 .PHONY : help
 
 

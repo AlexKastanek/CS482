@@ -57,9 +57,33 @@ include CMakeFiles/training.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/training.dir/flags.make
 
+CMakeFiles/training.dir/src/training.cpp.o: CMakeFiles/training.dir/flags.make
+CMakeFiles/training.dir/src/training.cpp.o: ../src/training.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/CS482/2-spam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/training.dir/src/training.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/training.dir/src/training.cpp.o -c /home/alex/Documents/CS482/2-spam/src/training.cpp
+
+CMakeFiles/training.dir/src/training.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/training.dir/src/training.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Documents/CS482/2-spam/src/training.cpp > CMakeFiles/training.dir/src/training.cpp.i
+
+CMakeFiles/training.dir/src/training.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/training.dir/src/training.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Documents/CS482/2-spam/src/training.cpp -o CMakeFiles/training.dir/src/training.cpp.s
+
+CMakeFiles/training.dir/src/training.cpp.o.requires:
+
+.PHONY : CMakeFiles/training.dir/src/training.cpp.o.requires
+
+CMakeFiles/training.dir/src/training.cpp.o.provides: CMakeFiles/training.dir/src/training.cpp.o.requires
+	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/training.cpp.o.provides.build
+.PHONY : CMakeFiles/training.dir/src/training.cpp.o.provides
+
+CMakeFiles/training.dir/src/training.cpp.o.provides.build: CMakeFiles/training.dir/src/training.cpp.o
+
+
 CMakeFiles/training.dir/src/SmsDatabase.cpp.o: CMakeFiles/training.dir/flags.make
 CMakeFiles/training.dir/src/SmsDatabase.cpp.o: ../src/SmsDatabase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/CS482/2-spam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/training.dir/src/SmsDatabase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/CS482/2-spam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/training.dir/src/SmsDatabase.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/training.dir/src/SmsDatabase.cpp.o -c /home/alex/Documents/CS482/2-spam/src/SmsDatabase.cpp
 
 CMakeFiles/training.dir/src/SmsDatabase.cpp.i: cmake_force
@@ -81,40 +105,16 @@ CMakeFiles/training.dir/src/SmsDatabase.cpp.o.provides: CMakeFiles/training.dir/
 CMakeFiles/training.dir/src/SmsDatabase.cpp.o.provides.build: CMakeFiles/training.dir/src/SmsDatabase.cpp.o
 
 
-CMakeFiles/training.dir/src/main.cpp.o: CMakeFiles/training.dir/flags.make
-CMakeFiles/training.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/CS482/2-spam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/training.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/training.dir/src/main.cpp.o -c /home/alex/Documents/CS482/2-spam/src/main.cpp
-
-CMakeFiles/training.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/training.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Documents/CS482/2-spam/src/main.cpp > CMakeFiles/training.dir/src/main.cpp.i
-
-CMakeFiles/training.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/training.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Documents/CS482/2-spam/src/main.cpp -o CMakeFiles/training.dir/src/main.cpp.s
-
-CMakeFiles/training.dir/src/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/training.dir/src/main.cpp.o.requires
-
-CMakeFiles/training.dir/src/main.cpp.o.provides: CMakeFiles/training.dir/src/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/training.dir/build.make CMakeFiles/training.dir/src/main.cpp.o.provides.build
-.PHONY : CMakeFiles/training.dir/src/main.cpp.o.provides
-
-CMakeFiles/training.dir/src/main.cpp.o.provides.build: CMakeFiles/training.dir/src/main.cpp.o
-
-
 # Object files for target training
 training_OBJECTS = \
-"CMakeFiles/training.dir/src/SmsDatabase.cpp.o" \
-"CMakeFiles/training.dir/src/main.cpp.o"
+"CMakeFiles/training.dir/src/training.cpp.o" \
+"CMakeFiles/training.dir/src/SmsDatabase.cpp.o"
 
 # External object files for target training
 training_EXTERNAL_OBJECTS =
 
+training: CMakeFiles/training.dir/src/training.cpp.o
 training: CMakeFiles/training.dir/src/SmsDatabase.cpp.o
-training: CMakeFiles/training.dir/src/main.cpp.o
 training: CMakeFiles/training.dir/build.make
 training: CMakeFiles/training.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/Documents/CS482/2-spam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable training"
@@ -125,8 +125,8 @@ CMakeFiles/training.dir/build: training
 
 .PHONY : CMakeFiles/training.dir/build
 
+CMakeFiles/training.dir/requires: CMakeFiles/training.dir/src/training.cpp.o.requires
 CMakeFiles/training.dir/requires: CMakeFiles/training.dir/src/SmsDatabase.cpp.o.requires
-CMakeFiles/training.dir/requires: CMakeFiles/training.dir/src/main.cpp.o.requires
 
 .PHONY : CMakeFiles/training.dir/requires
 

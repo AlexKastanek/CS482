@@ -4,6 +4,6 @@
 CMakeFiles/training.dir/src/SmsDatabase.cpp.o: ../include/SmsDatabase.h
 CMakeFiles/training.dir/src/SmsDatabase.cpp.o: ../src/SmsDatabase.cpp
 
-CMakeFiles/training.dir/src/main.cpp.o: ../include/SmsDatabase.h
-CMakeFiles/training.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/training.dir/src/training.cpp.o: ../include/SmsDatabase.h
+CMakeFiles/training.dir/src/training.cpp.o: ../src/training.cpp
 

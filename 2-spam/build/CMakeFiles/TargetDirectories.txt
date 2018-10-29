@@ -1,3 +1,4 @@
 /home/alex/Documents/CS482/2-spam/build/CMakeFiles/rebuild_cache.dir
 /home/alex/Documents/CS482/2-spam/build/CMakeFiles/training.dir
 /home/alex/Documents/CS482/2-spam/build/CMakeFiles/edit_cache.dir
+/home/alex/Documents/CS482/2-spam/build/CMakeFiles/classify.dir

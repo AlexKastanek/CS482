@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alex/Documents/CS482/2-spam/src/SmsDatabase.cpp" "/home/alex/Documents/CS482/2-spam/build/CMakeFiles/training.dir/src/SmsDatabase.cpp.o"
-  "/home/alex/Documents/CS482/2-spam/src/training.cpp" "/home/alex/Documents/CS482/2-spam/build/CMakeFiles/training.dir/src/training.cpp.o"
+  "/home/alex/Documents/CS482/2-spam/src/SmsDatabase.cpp" "/home/alex/Documents/CS482/2-spam/build/CMakeFiles/classify.dir/src/SmsDatabase.cpp.o"
+  "/home/alex/Documents/CS482/2-spam/src/classify.cpp" "/home/alex/Documents/CS482/2-spam/build/CMakeFiles/classify.dir/src/classify.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

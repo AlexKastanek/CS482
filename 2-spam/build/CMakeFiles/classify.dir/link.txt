@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/classify.dir/src/classify.cpp.o CMakeFiles/classify.dir/src/SmsDatabase.cpp.o  -o classify 
