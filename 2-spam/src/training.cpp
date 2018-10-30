@@ -140,20 +140,5 @@ int main(int argc, char *argv[])
 
   outSpamProbabilityFile.close();
 
-  /*
-  unordered_map<string, int>::iterator i;
-  cout << "HAM WORDS:" << endl;
-  for (i = hamMap.begin(); i != hamMap.end(); i++)
-  {
-    cout << "(" << i->first << ", " << i->second << ")" << endl;
-  }
-  cout << endl;
-  cout << "SPAM WORDS: " << endl;
-  for (i = spamMap.begin(); i != spamMap.end(); i++)
-  {
-    cout << "(" << i->first << ", " << i->second << ")" << endl;
-  }
-  */
-
   return 0;
 }

@@ -16,6 +16,7 @@ bool SmsDatabase::ExtractData(string filename)
   string format, line;
   int lineCount = 0;
 
+  //open file and check if open
   fin.open(filename);
   if (!fin.is_open())
   {
@@ -25,13 +26,15 @@ bool SmsDatabase::ExtractData(string filename)
     return false;
   }
 
-  getline(fin, format);
-  lineCount++;
-  //cout << format << endl;
-
   //get each line until end of file is reached
   while (getline(fin, line))
   {
+    //this check is to help with the very picky autograder
+    if (line == "v1,v2,,,")
+    {
+      continue;
+    }
+
     Sms sms;
     MessageType messageType;
     vector<string> words;
@@ -39,7 +42,6 @@ bool SmsDatabase::ExtractData(string filename)
     char character = '\0';
 
     lineCount++;
-    //cout << line << endl;
 
     //append to messageType until a comma is reached
     int index = 0;
@@ -47,7 +49,6 @@ bool SmsDatabase::ExtractData(string filename)
     {
       character = line[index];
       index++;
-      //cout << character << endl;
 
       if (character == ',')
       {
@@ -80,33 +81,13 @@ bool SmsDatabase::ExtractData(string filename)
       return false;
     }
 
-    //append to message and words until triple comma reached
-    //ignore quotations
-    int commaCounter = 0;
-    while (true)
+    //append to message and words until end of line
+    for (int i = index; i < line.size(); i++)
     {
-      character = line[index];
-      index++;
+      character = line[i];
 
-      //check for comma, break if counter is 3, reset if not a comma
-      if (character == ',')
-      {
-        commaCounter++;
-        if (commaCounter >= 3)
-        {
-          break;
-        }
-      }
-      else
-      {
-        commaCounter = 0;
-      }
-
-      //append character to message if not quotation marks
-      if (character != '\"')
-      {
-        message.push_back(character);
-      }
+      //append the character to message
+      message.push_back(character);
 
       //append character to word if character is a letter (upper or lower case)
       if ((character >= 'a' && character <= 'z') ||
