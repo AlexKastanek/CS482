@@ -6,6 +6,8 @@
 
 using namespace std;
 
+double NaiveBayes(double prior, double likelihood, double evidence);
+
 struct SmsClassification {
   MessageType type;
   double probSpam;
@@ -33,7 +35,8 @@ int main(int argc, char* argv[])
   int hamWordAmount = 0;
   int commandArgCount = 9;
   ifstream fin;
-  string resourcesDirPath = "..//res//";
+  ofstream fout;
+  string resourcesDirPath = "";
   string inDataFilePath, inSpamProbFilePath, inHamProbFilePath, 
          outClassFilePath;
 
@@ -93,13 +96,32 @@ int main(int argc, char* argv[])
     }
   }
 
+  cout << inDataFilePath << endl;
+  cout << inSpamProbFilePath << endl;
+  cout << inHamProbFilePath << endl;
+  cout << outClassFilePath << endl;
+
+  fout.open(outClassFilePath);
+  if (!fout.is_open())
+  {
+    cout << "ERROR: could not open classification file" << endl;
+    return 7;
+  }
+  //fout.close();
+
+  cout << "check 1" << endl;
+
   //get data from testing dataset
   if (!database.ExtractData(inDataFilePath))
   {
     return 3;
   }
+  cout << "check 2" << endl;
+
   //database.PrintData();
   testingData = database.GetData();
+
+  cout << "check 3" << endl;
 
   /*get data from probability files*/
 
@@ -215,16 +237,36 @@ int main(int argc, char* argv[])
   for (int i = 0; i < testingData.size(); i++)
   {
     SmsClassification classification;
-    double probGivenSpam, probGivenHam;
+    double probGivenSpam, probGivenHam, probTotal;
+    double probSpamGivenMessage, probHamGivenMessage;
 
     //copy over the message
-    classification.message = testingData.message;
+    classification.message = testingData[i].message;
 
-    //get the probability the message occured given the message is spam or ham
-    for (int j = 0; j < testingData.words.size(); i++)
+    /*
+    cout << "********* NEW MESSAGE *********" << endl;
+    if (testingData[i].type == MESSAGE_SPAM)
     {
-      double spamProb = spamProbs[testingData.words[j]];
-      double hamProb = hamProbs[testingData.words[j]];
+      cout << "SPAM: ";
+    }
+    else
+    {
+      cout << "HAM: ";
+    }
+    cout << testingData[i].message << endl;
+    */
+
+    //for each word in the message, get probability of the word occurring
+    //and get the probability of the word occurring given message is spam or ham
+    //then add the probabilities to the message's respective probabilities
+    for (int j = 0; j < testingData[i].words.size(); j++)
+    {
+      double spamProb = spamProbs[testingData[i].words[j]];
+      double hamProb = hamProbs[testingData[i].words[j]];
+      double prob = ((spamProb * spamWordAmount) + (hamProb * hamWordAmount)) 
+                    / (spamWordAmount + hamWordAmount);
+
+      //cout << testingData[i].words[j] << ":" << endl;
 
       if (spamProb == 0)
       {
@@ -234,23 +276,169 @@ int main(int argc, char* argv[])
       {
         hamProb = 0.0000001;
       }
+      if (prob == 0)
+      {
+        prob = 0.0000001;
+      }
 
+      /*
       if (j == 0)
       {
         probGivenSpam = spamProb;
         probGivenHam = hamProb;
+        probTotal = prob;
       }
       else
       {
         probGivenSpam *= spamProb;
         probGivenHam *= hamProb;
+        probTotal *= prob;
       }
+      */
+
+      if (j == 0)
+      {
+        probSpamGivenMessage = NaiveBayes(
+          totalSpamProb,
+          spamProb,
+          prob);
+
+        probHamGivenMessage = NaiveBayes(
+          totalHamProb,
+          hamProb,
+          prob);
+      }
+      else
+      {
+        probSpamGivenMessage *= NaiveBayes(
+          totalSpamProb,
+          spamProb,
+          prob);
+
+        probHamGivenMessage *= NaiveBayes(
+          totalHamProb,
+          hamProb,
+          prob);
+      }
+
+      /*
+      cout << testingData[i].words[j] << ":" << endl 
+           << "SPAM - " << spamProb 
+           << ", HAM - " << hamProb 
+           << ", TOTAL - " << prob << endl;
+      */
+    }
+    /*
+    cout << "Message:" << endl 
+         << "SPAM - " << probGivenSpam 
+         << ", HAM - " << probGivenHam 
+         << ", TOTAL - " << probTotal << endl;
+    */
+
+    /*
+    classification.probSpam = NaiveBayes(
+      totalSpamProb,
+      probGivenSpam,
+      probTotal);
+
+    classification.probHam = NaiveBayes(
+      totalHamProb,
+      probGivenHam,
+      probTotal);
+    */
+
+    classification.probSpam = probSpamGivenMessage;
+    classification.probHam = probHamGivenMessage;
+
+    //cout << "p(SPAM | message): " << classification.probSpam << endl;
+    //cout << "p(HAM | message): " << classification.probHam << endl;
+    //cout << "Classification: ";
+    if (classification.probSpam > classification.probHam)
+    {
+      classification.type = MESSAGE_SPAM;
+      //cout << "SPAM" << endl;
+    }
+    else
+    {
+      classification.type = MESSAGE_HAM;
+      //cout << "HAM" << endl;
     }
 
-    //TODO: get the probability the message occured (probabilty word 1 occurred * probability word 2 occurred * ...)
+    classifications.push_back(classification);
   }
 
+  //compare
+  int correctCounter = 0;
+  if (testingData.size() != classifications.size())
+  {
+    cout << "ERROR: results are of different sizes" << endl;
+    return 6;
+  }
+  for (int i = 0; i < testingData.size(); i++)
+  {
+    if (testingData[i].type == classifications[i].type)
+    {
+      correctCounter++;
+    }
+    else
+    {
+      cout << endl << "Incorrect classification:" << endl;
+      cout << "Message: " << classifications[i].message << endl;
+      cout << "Type: ";
+      if (testingData[i].type == MESSAGE_SPAM)
+      {
+        cout << "SPAM" << endl;
+      }
+      else
+      {
+        cout << "HAM" << endl;
+      }
+      cout << "Probability SPAM: " << classifications[i].probSpam << endl;
+      cout << "Probability HAM: " << classifications[i].probHam << endl;
+    }
+  }
+  cout << endl << "SCORE: " 
+       << (double) (((double)correctCounter) / ((double)testingData.size()))
+       << endl << (testingData.size() - correctCounter) << " out of "
+       << testingData.size() << " guessed incorrectly" << endl;
+
   //output to file
+  /*
+  fout.open(outClassFilePath);
+  if (!fout.is_open())
+  {
+    cout << "ERROR: could not open classification file" << endl;
+    return 7;
+  }
+  */
+  for (int i = 0; i < classifications.size(); i++)
+  {
+    if (classifications[i].type == MESSAGE_SPAM)
+    {
+      fout << "spam, ";
+    }
+    else
+    {
+      fout << "ham, ";
+    }
+    string message = classifications[i].message;
+    message.pop_back();
+    message.pop_back();
+    //message.pop_back();
+    //message.pop_back();
+    fout << "\"" << message << "\",,," << endl;
+  }
+  fout.close();
 
   return 0;
+}
+
+double NaiveBayes(double prior, double likelihood, double evidence)
+{
+  double posterior;
+
+  //cout << "Bayes: (" << prior << " * " << likelihood << ") / " << evidence << endl;
+
+  posterior = (prior * likelihood) / evidence;
+  return posterior;
 }

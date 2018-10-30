@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
   int hamCount = 0, spamCount = 0;
   int commandArgCount = 7;
   ofstream outHamProbabilityFile, outSpamProbabilityFile;
-  string resourcesDirPath = "..//res//";
+  string resourcesDirPath = "";
   string inSpamFilePath, outHamProbabilityFilePath, outSpamProbabilityFilePath;
 
   //get command line
@@ -65,13 +65,17 @@ int main(int argc, char *argv[])
     }
   }
 
+  cout << inSpamFilePath << endl;
+  cout << outSpamProbabilityFilePath << endl;
+  cout << outHamProbabilityFilePath << endl;
+
   //get data from input file
   if (!database.ExtractData(inSpamFilePath))
   {
     return 3;
   }
 
-  database.PrintData();
+  //database.PrintData();
 
   //for each message, if the message is ham, increment value of each word in the ham map
   //if the message is spam, increment value of each word in the spam map
