@@ -22,5 +22,5 @@ For cart balancing a pole:
 
 For car driving up a mountain:  
 ```
-./cart.py
+./car.py
 ```
