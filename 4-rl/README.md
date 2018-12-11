@@ -13,11 +13,14 @@ sudo pip install gym
 ```
 chmod +x cart.py  
 chmod +x car.py  
-
-For cart balancing a pole:  
-./cart.py  
-
-For car driving up a mountain:  
-./cart.py
 ```
 
+For cart balancing a pole:  
+```
+./cart.py  
+```
+
+For car driving up a mountain:  
+```
+./cart.py
+```
